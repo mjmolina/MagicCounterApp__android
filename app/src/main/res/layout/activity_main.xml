@@ -22,8 +22,8 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/p1_TextView1"
-                android:layout_width="@dimen/Lives_layout_width"
+                android:id="@+id/p1TextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
@@ -238,8 +238,8 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/lifeTextView1"
-                android:layout_width="0dp"
+                android:id="@+id/p2TextView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
