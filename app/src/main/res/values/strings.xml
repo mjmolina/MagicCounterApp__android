@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Magic Counter App</string>
+    <string name="lifeTextView1">Lives </string>
+    <string name="lifeTextView1_B">Poison </string>
+    <string name="player_1">PLAYER 1</string>
+    <string name="poison">Poison</string>
+
+
 </resources>

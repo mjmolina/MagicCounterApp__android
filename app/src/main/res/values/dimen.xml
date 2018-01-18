@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextView1_paddingTop">20dp</dimen>
+    <dimen name="TextView1_paddingBottom">2dp</dimen>
+    <dimen name="TextView1_paddingLeftStartEnd">30dp</dimen>
+    <dimen name="TextView1_paddingEnd_B">15dp</dimen>
+    <dimen name="TextView_Small">24sp</dimen>
+
+
+
+
+
+
+</resources>
