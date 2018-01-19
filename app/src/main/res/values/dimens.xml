@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextView1_paddingTop">20dp</dimen>
+    <dimen name="TextView1_paddingBottom">2dp</dimen>
+    <dimen name="TextView1_paddingLeftStartEnd">30dp</dimen>
+    <dimen name="TextView1_paddingEnd_B">15dp</dimen>
+    <dimen name="TextView_paddingLeft">30dp</dimen>
+    <dimen name="TextView_paddingStart">30dp</dimen>
+    <dimen name="TextView_paddingRightEnd">20sp</dimen>
+    <dimen name="textSize_small">22sp</dimen>
+    <dimen name="layout_marginRight">30dp</dimen>
+    <dimen name="textsize_Medium">30sp</dimen>
+    <dimen name="layout_width_reset">30dp</dimen>
+    <dimen name="TextView_marginLeft">0dp</dimen>
+    <dimen name="TextView_marginRightEnd">10dp</dimen>
+    <dimen name="layoutwidth_TV">0dp</dimen>
+</resources>

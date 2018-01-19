@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">Magic Counter App</string>
+    <string name="app_name">Magic Counter</string>
     <string name="lifeTextView1">Lives </string>
     <string name="lifeTextView1_B">Poison </string>
     <string name="player_1">PLAYER 1</string>
     <string name="poison">Poison</string>
-
-
+    <string name="plus">+</string>
+    <string name="numberlives">20</string>
+    <string name="numberpoison">0</string>
+    <string name="minus">-</string>
+    <string name="reset">RESET</string>
+    <string name="Exit">EXIT</string>
+    <string name="player_2">PLAYER 2</string>
 </resources>

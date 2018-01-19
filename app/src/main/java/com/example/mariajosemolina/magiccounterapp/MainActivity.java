@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     Button p2PoisonMinus;
     Button p2PoisonPlus;
     TextView p2PoisonScore;
-
     Button resetButton;
     Button exitButton;
 
@@ -60,19 +59,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void askExit() {
 
-        String btn_yes = "Yes";
-        String btn_no = "No";
+        String button_yes = "Yes";
+        String button_no = "No";
         AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
                 .setTitle("Are you sure you want to Exit?")
                 .setCancelable(false)
-                .setMessage("Leru Leru")
-                .setPositiveButton(btn_yes, new DialogInterface.OnClickListener() {
+                .setPositiveButton(button_yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         System.exit(1);
                     }
                 })
-                .setNegativeButton(btn_no, new DialogInterface.OnClickListener() {
+                .setNegativeButton(button_no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         dialogInterface.dismiss();
@@ -83,21 +81,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void showWinner(String p) {
 
-        String btn_reset = "Reset";
-        String btn_close = "Exit";
+        String button_reset = "Reset";
+        String button_close = "Exit";
         AlertDialog dialog = new AlertDialog.Builder(MainActivity.this)
-                //.setTitle(MainActivity.this.getResources().getString(R.string.app_name))
                 .setTitle(p + " won!")
                 .setCancelable(false)
-                .setMessage("Leru Leru")
-                //.setIcon(R.drawable.logo)
-                .setPositiveButton(btn_reset, new DialogInterface.OnClickListener() {
+                .setMessage("Congrats! Great work!!")
+                .setPositiveButton(button_reset, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         resetScreen();
                     }
                 })
-                .setNegativeButton(btn_close, new DialogInterface.OnClickListener() {
+                .setNegativeButton(button_close, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         System.exit(1);
@@ -131,16 +127,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 p1Lives = p1Lives - 1;
 
-                if (p1Lives <= 5){
+                if (p1Lives <= 0){
+                    showWinner("Player 2");
+                }
+                else if (p1Lives <= 5){
                     p1LifeScore.setTextColor(Color.RED);
                 }
                 else if (p1Lives > 5){
                     p1LifeScore.setTextColor(Color.BLACK);
                 }
-                if (p1Lives <= 0){
-                    showWinner("Player 2");
 
-                }
                 p1LifeScore.setText(String.valueOf(p1Lives));
             }
         });
