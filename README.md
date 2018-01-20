@@ -9,7 +9,11 @@ I am already working on options to be able to change the distribution of the ele
 As always, you can check the code of my application here.
 
 
+![Screenshot](screenshot.jpg "Logo Title Text 1")
 
 
 
-###### The image below to “Magic Gathering ®” (from the website: www.wallhalla.com)
+
+
+
+###### The image belongs to “Magic Gathering ®” (I downloaded it from the website: www.wallhalla.com)
