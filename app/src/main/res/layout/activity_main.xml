@@ -75,7 +75,7 @@
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
-                android:drawableStart="@drawable/heart"
+                android:drawableStart="@drawable/skull"
                 android:drawableLeft="@drawable/skull"
                 android:text="@string/poison"
                 android:textColor="@android:color/black"/>
@@ -297,7 +297,7 @@
                 android:textAlignment="center"
                 android:textSize="22sp"
                 android:fontFamily="@font/expletussanssemibold"
-                android:drawableStart="@drawable/heart"
+                android:drawableStart="@drawable/skull"
                 android:drawableLeft="@drawable/skull"
                 android:text="@string/poison"
                 android:textColor="@android:color/black" />
