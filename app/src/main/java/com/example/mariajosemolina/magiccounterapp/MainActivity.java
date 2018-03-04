@@ -101,11 +101,37 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .show();
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public void resume_scores_on_screen(Bundle savedInstanceState) {
+        initElements();
+        p1Lives = savedInstanceState.getInt("p1Life");
+        p1Poison = savedInstanceState.getInt("p1Poison");
+        p2Lives= savedInstanceState.getInt("p2Life");
+        p2Poison= savedInstanceState.getInt("p2Poison");
 
+        p1LifeScore.setText(String.valueOf(p1Lives));
+        p1PoisonScore.setText(String.valueOf(p1Poison));
+        p2LifeScore.setText(String.valueOf(p2Lives));
+        p2PoisonScore.setText(String.valueOf(p2Poison));
+
+
+        if (p1Lives <= 5){
+            p1LifeScore.setTextColor(Color.RED);
+        }
+        else if (p1Lives > 5){
+            p1LifeScore.setTextColor(Color.BLACK);
+        }
+
+        if (p2Lives <= 5){
+            p2LifeScore.setTextColor(Color.RED);
+        }
+        else if (p2Lives > 5){
+            p2LifeScore.setTextColor(Color.BLACK);
+        }
+
+    }
+
+
+    public void initElements() {
 
         p1LifeMinus = (Button) findViewById(R.id.p1_life_minus);
         p1LifePlus = (Button) findViewById(R.id.p1_life_plus);
@@ -121,6 +147,19 @@ public class MainActivity extends AppCompatActivity {
         p2PoisonScore = (TextView) findViewById(R.id.p2_poisonScore);
         resetButton = (Button) findViewById(R.id.resetButton);
         exitButton = (Button) findViewById(R.id.exitButton);
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        if (savedInstanceState != null) {
+            resume_scores_on_screen(savedInstanceState);
+
+        }
+        else {initElements();
+        }
 
         p1LifeMinus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                 p1PoisonScore.setText(String.valueOf(p1Poison));
             }
         });
-       p1PoisonPlus.setOnClickListener(new View.OnClickListener() {
+        p1PoisonPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 p1Poison = p1Poison + 1;
@@ -235,6 +274,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    protected void onSaveInstanceState(Bundle onState) {
+        super.onSaveInstanceState(onState);
+
+        onState.putInt("p1Life", Integer.parseInt(p1LifeScore.getText().toString()));
+        onState.putInt("p1Poison", Integer.parseInt(p1PoisonScore.getText().toString()));
+        onState.putInt("p2Life", Integer.parseInt(p2LifeScore.getText().toString()));
+        onState.putInt("p2Poison", Integer.parseInt(p2PoisonScore.getText().toString()));
     }
 
 }

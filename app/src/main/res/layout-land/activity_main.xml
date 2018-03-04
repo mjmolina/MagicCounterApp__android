@@ -3,12 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundvert">
+    android:orientation="horizontal"
+    android:background="@drawable/background">
 
 
     <LinearLayout
         android:layout_width="@dimen/textView_layout_width"
-        android:weightSum="6"
+        android:weightSum="5"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
@@ -20,11 +21,10 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/p1_TextView"
+                android:id="@+id/p1TextView"
                 android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginTop="@dimen/textView_marginTop"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
@@ -33,28 +33,7 @@
                 />
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2">
 
-            <ImageView
-                android:id="@+id/p1_lifeImg"
-                android:layout_weight="1"
-                android:layout_height="@dimen/ImageView_height"
-                android:layout_width="match_parent"
-                android:src="@drawable/heart"
-                />
-
-            <ImageView
-                android:id="@+id/p1_poisonImg"
-                android:layout_weight="1"
-                android:layout_height="@dimen/ImageView_height"
-                android:layout_width="match_parent"
-                android:src="@drawable/skull"
-                />
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,24 +42,40 @@
 
             <TextView
                 android:id="@+id/p1_lifeTextView1"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/TextView1_paddingTop"
+                android:paddingBottom="@dimen/TextView1_paddingBottom"
+                android:paddingLeft="@dimen/TextView_paddingLeft"
+                android:paddingStart="@dimen/TextView_paddingStart"
+                android:paddingEnd="@dimen/TextView_paddingRightEnd"
+                android:paddingRight="@dimen/TextView_paddingRightEnd"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
+                android:drawableStart="@drawable/heart"
+                android:drawableLeft="@drawable/heart"
                 android:text="@string/lifeTextView1"
                 android:textColor="@android:color/black"
                 />
 
             <TextView
                 android:id="@+id/p1_poisonTextView1"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/TextView1_paddingTop"
+                android:paddingBottom="@dimen/TextView1_paddingBottom"
+                android:paddingLeft="@dimen/TextView_paddingLeft"
+                android:paddingStart="@dimen/TextView_paddingStart"
+                android:paddingEnd="@dimen/TextView_paddingRightEnd"
+                android:paddingRight="@dimen/TextView_paddingRightEnd"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
+                android:drawableStart="@drawable/skull"
+                android:drawableLeft="@drawable/skull"
                 android:text="@string/poison"
                 android:textColor="@android:color/black"/>
         </LinearLayout>
@@ -95,13 +90,13 @@
             <Button
                 android:id="@+id/p1_life_plus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
@@ -110,13 +105,13 @@
             <Button
                 android:id="@+id/p1_poison_plus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
@@ -136,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="@dimen/textSize_bigvert"
+                android:textSize="@dimen/textSize_big"
                 android:text="@string/numberlives"
                 android:textColor="@android:color/black" />
 
@@ -146,12 +141,13 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="@dimen/textSize_bigvert"
+                android:textSize="@dimen/textSize_big"
                 android:text="@string/numberpoison"
-                android:textColor="@color/colornumberpoison" />
+                android:textColor="@color/colornumberpoison"
+
+                 />
 
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,13 +157,13 @@
             <Button
                 android:id="@+id/p1_life_minus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
@@ -176,13 +172,13 @@
             <Button
                 android:id="@+id/p1_poison_minus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
@@ -202,17 +198,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
                 android:layout_marginRight="@dimen/layout_marginRight"
                 android:layout_marginEnd="@dimen/layout_marginRight" />
 
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/invisible2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                 />
 
             <Button
                 android:id="@+id/resetButton"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/layout_width_reset_exit"
                 android:layout_weight="1"
-                android:layout_marginRight="@dimen/layout_marginRight"
-                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginLeft="@dimen/TextView_marginLeft"
+                android:layout_marginStart="@dimen/TextView_marginLeft"
+                android:layout_marginRight="@dimen/TextView_marginRightEnd"
+                android:layout_marginEnd="@dimen/TextView_marginRightEnd"
                 android:textAlignment="center"
                 android:textSize="@dimen/TextSize_reset_exit"
                 android:background="@drawable/shapebutton_reset"
@@ -222,16 +233,9 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="@dimen/View_width"
-        android:layout_marginTop="@dimen/View_marginTop"
-        android:layout_marginBottom="@dimen/View_marginBottom"
-        android:layout_height="@dimen/View_height"
-        android:background="@color/colordivisionline" />
-
     <LinearLayout
         android:layout_width="@dimen/textView_layout_width"
-        android:weightSum="6"
+        android:weightSum="5"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:orientation="vertical"
@@ -243,11 +247,10 @@
             android:layout_weight="1">
 
             <TextView
-                android:id="@+id/p2_TextView"
+                android:id="@+id/p2TextView"
                 android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginTop="@dimen/textView_marginTop"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
@@ -264,51 +267,44 @@
             android:layout_weight="1"
             android:weightSum="2">
 
-            <ImageView
-                android:id="@+id/p2_lifeImg"
-                android:layout_weight="1"
-                android:layout_height="@dimen/ImageView_height"
-                android:layout_width="match_parent"
-                android:src="@drawable/heart"
-                />
-
-            <ImageView
-                android:id="@+id/p2_poisonImg"
-                android:layout_weight="1"
-                android:layout_height="@dimen/ImageView_height"
-                android:layout_width="match_parent"
-                android:src="@drawable/skull"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:weightSum="2">
-
             <TextView
-                android:id="@+id/p2_lifeTextView1"
-                android:layout_width="wrap_content"
+                android:id="@+id/lifeTextView1"
+                android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/TextView1_paddingTop"
+                android:paddingBottom="@dimen/TextView1_paddingBottom"
+                android:paddingLeft="@dimen/TextView_paddingLeft"
+                android:paddingStart="@dimen/TextView_paddingStart"
+                android:paddingEnd="@dimen/TextView_paddingRightEnd"
+                android:paddingRight="@dimen/TextView_paddingRightEnd"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
+                android:drawableStart="@drawable/heart"
+                android:drawableLeft="@drawable/heart"
                 android:text="@string/lifeTextView1"
-                android:textColor="@android:color/black"
-                />
+                android:textColor="@android:color/black"/>
 
             <TextView
-                android:id="@+id/p2_poisonTextView1"
-                android:layout_width="wrap_content"
+                android:id="@+id/poisonTextView1"
+                android:layout_width="@dimen/textView_layout_width"
                 android:layout_height="wrap_content"
+                android:paddingTop="@dimen/TextView1_paddingTop"
+                android:paddingBottom="@dimen/TextView1_paddingBottom"
+                android:paddingLeft="@dimen/TextView_paddingLeft"
+                android:paddingStart="@dimen/TextView_paddingStart"
+                android:paddingEnd="@dimen/TextView_paddingRightEnd"
+                android:paddingRight="@dimen/TextView_paddingRightEnd"
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:textSize="@dimen/textSize_small"
                 android:fontFamily="@font/expletussanssemibold"
+                android:drawableStart="@drawable/skull"
+                android:drawableLeft="@drawable/skull"
                 android:text="@string/poison"
-                android:textColor="@android:color/black"/>
+                android:textColor="@android:color/black" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -321,13 +317,13 @@
             <Button
                 android:id="@+id/p2_life_plus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
@@ -336,17 +332,18 @@
             <Button
                 android:id="@+id/p2_poison_plus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
                 android:text="@string/plus"/>
+
         </LinearLayout>
 
         <LinearLayout
@@ -361,7 +358,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="@dimen/textSize_bigvert"
+                android:textSize="@dimen/textSize_big"
                 android:text="@string/numberlives"
                 android:textColor="@android:color/black" />
 
@@ -371,7 +368,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="@dimen/textSize_bigvert"
+                android:textSize="@dimen/textSize_big"
                 android:text="@string/numberpoison"
                 android:textColor="@color/colornumberpoison" />
 
@@ -386,33 +383,32 @@
             <Button
                 android:id="@+id/p2_life_minus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
-                android:text="@string/minus"/>
+                android:text="@string/minus" />
 
             <Button
                 android:id="@+id/p2_poison_minus"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/button_height"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layout_marginLeft="@dimen/button_marginsButton"
-                android:layout_marginStart="@dimen/button_marginsButton"
-                android:layout_marginRight="@dimen/button_marginsButton"
-                android:layout_marginEnd="@dimen/button_marginsButton"
-                android:layout_marginBottom="@dimen/button_marginsButton"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight"
+                android:layout_marginBottom="@dimen/button_marginButton"
                 android:background="@drawable/shapebutton"
                 android:textSize="@dimen/textsize_Medium"
                 android:textColor="@android:color/black"
                 android:text="@string/minus"/>
-
         </LinearLayout>
 
         <LinearLayout
@@ -434,6 +430,17 @@
                 android:background="@drawable/shapebutton_exit"
                 android:textColor="@android:color/black"
                 android:text="@string/Exit"/>
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/invisible3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/TextView_paddingLeft"
+                android:layout_marginStart="@dimen/TextView_paddingLeft"
+                android:layout_marginRight="@dimen/layout_marginRight"
+                android:layout_marginEnd="@dimen/layout_marginRight" />
 
             <Button
                 android:visibility="invisible"
