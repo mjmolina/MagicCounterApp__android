@@ -1,6 +1,6 @@
-# MagicCounterApp
+# MagicCounterApp (
 
-Here is my second project, a “Magic the Gathering” Counter.
+Here is my second project, a “Magic, the Gathering” Counter for the Nanodegree "basics android" by Google in Udacity.
 
 As a Magic Player, I have been always looking for ways use an external tool to keep track of the different scores on the game, since using dices, or pen and paper is not really a comfortable solution.
 Another important detail, is to be able to keep track of your enemy’s counters, because you do not want to lose a game because of some mistake, that is why I decided to design the layout in a way to allow both players to look at all the scores.
