@@ -1,4 +1,4 @@
-# MagicCounterApp (
+# MagicCounterApp (abnd02_ScoreKepper)
 
 Here is my second project, a “Magic, the Gathering” Counter for the Nanodegree "basics android" by Google in Udacity.
 
